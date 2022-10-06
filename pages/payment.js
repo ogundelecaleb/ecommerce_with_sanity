@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useStateContext } from "../context/StateContext";
 import { PaystackButton } from "next-paystack";
 import { urlFor } from "../lib/client";
@@ -11,18 +11,45 @@ const Paymentform = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
-  
+  const [item, setItem] = useState([]);
+
+  // useEffect(() => {
+  //   cartItems.map((item) => {
+  //     setItem([item.name]);
+  //   });
+  // }, []);
+
+
+  useEffect(() => {
+    const cartItems =() => {
+      setItem(cartItems.name);
+    };
+  }, []);
+
+  const renderedList = cartItems.map((item) => {
+    return (
+      <div className="product" key={item._id}>
+        <img src={urlFor(item?.image[0])} className="cart-product-image" />
+        <div className="item-desc">
+          <div className="flex top">
+            <h5>{item.name}</h5>
+            <h4>#{item.price}</h4>
+          </div>
+        </div>
+      </div>
+    );
+  });
+
   const custom_fields = [
     {
-      display_name: { phone },
+      display_name: { item },
       variable_name: { name },
-      value: {email}
+      value: { email },
     },
     {
       display_name: { name },
       variable_name: { name },
-      
-    }
+    },
   ];
   const componentProps = {
     email,
@@ -46,21 +73,9 @@ const Paymentform = () => {
       <div className="container">
         <div className="item">
           <div className="overlay-effect"></div>
-          {cartItems.map((item) => (
-            <div className="product" key={item._id}>
-              <img
-                src={urlFor(item?.image[0])}
-                className="cart-product-image"
-              />
-              <div className="item-desc">
-                <div className="flex top">
-                  <h5>{item.name}</h5>
-                  <h4>#{item.price}</h4>
-                </div>
-              </div>
-            </div>
-          ))}
-
+          
+            {renderedList}
+        
           <div className="item-details">
             <p className="item-details__title">Total:</p>
             <p className="item-details__amount">NGN {totalPrice}</p>

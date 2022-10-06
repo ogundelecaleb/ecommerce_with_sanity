@@ -169,7 +169,7 @@ const Cart = () => {
               <h3>#{totalPrice}</h3>
             </div>
             <div className="btn-container">
-              <Link href='/paymentform'>
+              <Link href='/payment'>
               <button onClick={() => setShowCart(false)}>
                 pay now
               </button>
