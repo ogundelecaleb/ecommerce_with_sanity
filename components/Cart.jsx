@@ -57,6 +57,8 @@ const Cart = () => {
     setShowCart,
     toggleCartItemQuanitity,
     onRemove,
+    qty,
+    setQty
   } = useStateContext();
 
   // const [paystackHook, setPaystackHook] = useState({
@@ -124,7 +126,7 @@ const Cart = () => {
                 <div className="item-desc">
                   <div className="flex top">
                     <h5>{item.name}</h5>
-                    <h4>${item.price}</h4>
+                    <h4>#{item.price}</h4>
                   </div>
                   <div className="flex bottom">
                     <div>
@@ -168,14 +170,18 @@ const Cart = () => {
               <h3>Subtotal:</h3>
               <h3>#{totalPrice}</h3>
             </div>
-            <div className="btn-container">
-              <Link href='/payment'>
-              <button onClick={() => setShowCart(false)}>
-                pay now
+            <div className="buttons">
+              <Link href='/payment' >
+              <button className='buy-now' onClick={() => setShowCart(false)}>
+                Buy At Normal Price
               </button>
-
               </Link>
 
+              <Link href='/priceslash' >
+              <button className='buy-now' onClick={() => setShowCart(false)}>
+                Buy at 70%OFF
+              </button>
+              </Link>
 
               {/* <PaystackButton
                 text="Checkout"

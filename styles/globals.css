@@ -11,6 +11,15 @@ body,
   width: 0px;
 }
 
+:root {
+  --main: #f02d34;
+  --barner-color : goldenrod;
+  --text:  gray;
+  --white: white;
+  --cards: #324d67;
+  --offwhite: #ebebeb;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -31,7 +40,7 @@ a {
   left: 0;
   right: 0;
   z-index: 10;
-  background: white;
+  background: var(--white);
   height: 2.5rem;
 }
 .navbar-container {
@@ -44,7 +53,7 @@ a {
   font-size: 29px;
   font-weight: 600;
   margin: 60px 0px;
-  color: #f02d34;
+  color: var(--main);
 }
 .marquee {
   position: relative;
@@ -73,16 +82,16 @@ a {
 }
 
 span.text-red {
-  -webkit-text-stroke: 1px #f02d34;
+  -webkit-text-stroke: 1px var(--main);
   margin-left: 6px;
 }
 .logo {
-  color: gray;
+  color:var(--text);
   font-size: 18px;
 }
 .cart-icon {
   font-size: 25px;
-  color: gray;
+  color: var(--text);
   cursor: pointer;
   position: relative;
   transition: transform 0.4s ease;
@@ -96,8 +105,8 @@ span.text-red {
   position: absolute;
   right: -8px;
   font-size: 12px;
-  color: #eee;
-  background-color: #f02d34;
+  color: var(--white);
+  background-color: var(--main);
   width: 18px;
   height: 18px;
   border-radius: 50%;
@@ -116,14 +125,14 @@ span.text-red {
   cursor: pointer;
   transform: scale(1, 1);
   transition: transform 0.5s ease;
-  color: #324d67;
+  color: var(--cards);
 }
 .product-card:hover {
   transform: scale(1.1, 1.1);
 }
 .product-image {
   border-radius: 15px;
-  background-color: #ebebeb;
+  background-color: var(--offwhite);
   transform: scale(1, 1);
   transition: transform 0.5s ease;
 }
@@ -139,7 +148,7 @@ span.text-red {
 
 .hero-banner-container {
   padding: 100px 40px;
-  background-color: goldenrod;
+  background-color:var(--barner-color);
 
   border-radius: 15px;
   position: relative;
@@ -153,8 +162,8 @@ span.text-red {
 .hero-banner-container button {
   border-radius: 15px;
   padding: 10px 16px;
-  background-color: #f02d34;
-  color: white;
+  background-color: var(--main);
+  color: var(--white);
   border: none;
   margin-top: 40px;
   font-size: 18px;
@@ -168,7 +177,7 @@ span.text-red {
   margin-top: 4px;
 }
 .hero-banner-container h1 {
-  color: white;
+  color: var(--white);
   font-size: 10em;
   margin-left: -20px;
   text-transform: uppercase;
@@ -189,10 +198,10 @@ span.text-red {
   line-height: 1.3;
   display: flex;
   flex-direction: column;
-  color: #324d67;
+  color: var(--cards);
 }
 .desc p {
-  color: #5f5f5f;
+  color: var(--text);
   font-weight: 100;
   text-align: end;
 }
@@ -206,7 +215,7 @@ span.text-red {
 .products-heading {
   text-align: center;
   margin: 40px 0px;
-  color: #324d67;
+  color: var(card);
 }
 .products-heading h2 {
   font-size: 40px;
@@ -218,12 +227,12 @@ span.text-red {
 }
 .footer-banner-container {
   padding: 100px 40px;
-  background-color: #f02d34;
+  background-color: var(--main);
   border-radius: 15px;
   position: relative;
   height: 400px;
   line-height: 1;
-  color: white;
+  color: var(--white);
   width: 100%;
   margin-top: 120px;
 }
@@ -234,8 +243,8 @@ span.text-red {
 .banner-desc button {
   border-radius: 15px;
   padding: 10px 16px;
-  background-color: white;
-  color: red;
+  background-color: var(--white);
+  color: var(--main);
   border: none;
   margin-top: 40px;
   font-size: 18px;
@@ -284,14 +293,14 @@ span.text-red {
 .cart-container {
   height: 100vh;
   width: 600px;
-  background-color: white;
+  background-color: var(--white);
   float: right;
   padding: 40px 10px;
   position: relative;
 }
 
 .footer-container {
-  color: #324d67;
+  color: var(--cards);
   text-align: center;
   margin-top: 20px;
   padding: 30px 10px;
@@ -324,7 +333,7 @@ span.text-red {
 }
 .cart-num-items {
   margin-left: 10px;
-  color: #f02d34;
+  color: var(--main);
 }
 .empty-cart {
   margin: 40px;
@@ -352,13 +361,13 @@ span.text-red {
   width: 180px;
   height: 150px;
   border-radius: 15px;
-  background-color: #ebebeb;
+  background-color: var(--offwhite);
 }
 .item-desc .flex {
   display: flex;
   justify-content: space-between;
   width: 350px;
-  color: #324d67;
+  color: var(--cards);
 }
 .item-desc .bottom {
   margin-top: 60px;
@@ -378,7 +387,7 @@ span.text-red {
 }
 .remove-item {
   font-size: 24px;
-  color: #f02d34;
+  color: var(--main);
   cursor: pointer;
   background: transparent;
   border: none;
@@ -389,6 +398,20 @@ span.text-red {
   right: 5px;
   width: 100%;
   padding: 30px 65px;
+}
+
+.cart-bottom .buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-bottom .buttons .buy-now {
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }
 
 .btn-container {
@@ -405,8 +428,8 @@ span.text-red {
   margin-top: 10px;
   margin-top: 40px;
   text-transform: uppercase;
-  background-color: #f02d34;
-  color: #fff;
+  background-color: var(--main);
+  color: var(--white);
   cursor: pointer;
   transform: scale(1, 1);
   transition: transform 0.5s ease;
@@ -419,12 +442,12 @@ span.text-red {
   gap: 40px;
   margin: 40px;
   margin-top: 60px;
-  color: #324d67;
+  color: var(--cards);
 }
 
 .product-detail-image {
   border-radius: 15px;
-  background-color: #ebebeb;
+  background-color: var(--offwhite);
 
   width: 400px;
   height: 400px;
@@ -432,7 +455,7 @@ span.text-red {
   transition: 0.3s ease-in-out;
 }
 .product-detail-image:hover {
-  background-color: #f02d34;
+  background-color: var(--main);
 }
 .small-images-container {
   display: flex;
@@ -441,17 +464,17 @@ span.text-red {
 }
 .small-image {
   border-radius: 8px;
-  background-color: #ebebeb;
+  background-color: var(--offwhite);
   width: 70px;
   height: 70px;
   cursor: pointer;
 }
 
 .selected-image {
-  background-color: #f02d34;
+  background-color: var(--main);
 }
 .reviews {
-  color: #f02d34;
+  color: var(--main);
   margin-top: 10px;
   display: flex;
   gap: 5px;
@@ -465,19 +488,19 @@ span.text-red {
   margin-top: 10px;
 }
 .reviews p {
-  color: #324d67;
+  color: var(--cards);
   margin-top: 0px;
 }
 .product-detail-desc .price {
   font-weight: 700;
   font-size: 26px;
   margin-top: 30px;
-  color: #f02d34;
+  color: var(--main);
 }
 .price .old-price,
 .product-price .old-price,
 .price .old-price {
-  color: gray;
+  color: var(--text);
   text-decoration: line-through;
 }
 .product-detail-desc .quantity {
@@ -492,12 +515,12 @@ span.text-red {
 }
 .buttons .add-to-cart {
   padding: 10px 20px;
-  border: 1px solid #f02d34;
+  border: 1px solid var(--main);
   margin-top: 40px;
   font-size: 18px;
   font-weight: 500;
-  background-color: white;
-  color: #f02d34;
+  background-color: var(--white);
+  color: var(--main);
   cursor: pointer;
   width: 200px;
   transform: scale(1, 1);
@@ -510,8 +533,8 @@ span.text-red {
   width: 200px;
 
   padding: 10px 20px;
-  background-color: #f02d34;
-  color: white;
+  background-color: var(--main);
+  color: var(--white);
   border: none;
   margin-top: 40px;
   font-size: 18px;
@@ -524,7 +547,7 @@ span.text-red {
   transform: scale(1.1, 1.1);
 }
 .quantity-desc {
-  border: 1px solid gray;
+  border: 1px solid var(--text);
   padding: 6px;
 }
 .quantity-desc span {
@@ -533,11 +556,11 @@ span.text-red {
   cursor: pointer;
 }
 .quantity-desc .minus {
-  border-right: 1px solid gray;
-  color: #f02d34;
+  border-right: 1px solid var(--text);
+  color: var(--main);
 }
 .quantity-desc .num {
-  border-right: 1px solid gray;
+  border-right: 1px solid var(--text);
   font-size: 20px;
 }
 .quantity-desc .plus {
@@ -550,7 +573,7 @@ span.text-red {
 .maylike-products-wrapper h2 {
   text-align: center;
   margin: 50px;
-  color: #324d67;
+  color: var(--cards);
 
   font-size: 28px;
 }
@@ -562,11 +585,11 @@ span.text-red {
 }
 .max-qty {
   font-weight: 500;
-  color: #f02d34;
+  color: var(--main);
 }
 .success-wrapper,
 .cancel-wrapper {
-  background-color: white;
+  background-color: var(--white);
   min-height: 60vh;
 }
 .success,
@@ -574,7 +597,7 @@ span.text-red {
   width: 1000px;
   margin: auto;
   margin-top: 160px;
-  background-color: #dcdcdc;
+  background-color: var(--offwhite);
   padding: 50px;
   border-radius: 15px;
   display: flex;
@@ -592,7 +615,7 @@ span.text-red {
   margin-top: 15px 0px;
   font-weight: 900;
   font-size: 40px;
-  color: #324d67;
+  color: var(--cards);
 }
 .success .email-msg {
   font-size: 16px;
@@ -612,22 +635,91 @@ span.text-red {
 }
 .success .description .email {
   margin-left: 5px;
-  color: #f02d34;
+  color: var(--main);
 }
 .product-max-qty {
   margin-top: 10px;
 }
-
 .container {
   display: flex;
-  flex-direction: row;
   margin: 5% auto;
   width: 635px;
   height: 430px;
-  background: white;
+  background: var(--white);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
 }
 
+
+/* slashed price section start */
+.slashed-price-container {
+  margin: 5% auto;
+  width: 65%;
+  height: 70%;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.slashed-price-container .slashed-price {
+  font-size: 2.5rem;
+  color: var(--main);
+}
+
+.slashed-price-container .btn {
+  background-color: #9b0b0f;
+}
+
+.conditions {
+  padding: 1rem;
+}
+.conditions h3{
+  margin-bottom: 1.5rem;
+  color: var(--cards)
+}
+.conditions h4 {
+  margin-bottom: 1rem;
+  color: var(--cards)
+}
+.conditions p {
+  color: var(--cards);
+}
+.progress {
+  background-color: var(--text);
+  height: 1rem;
+  border-radius: 4px;
+  width: 100%;
+  position: relative;
+  margin-top: 2.5rem;
+}
+.progress-section p {
+  margin-top: 0.5rem;
+  color: var(--main);
+}
+.progress .progress-in {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 4px;
+  background-color: var(--main);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+.progress .skill-percent {
+  position: absolute;
+  right: 0;
+  color: var(--main);
+  top: -40px;
+  font-weight: 400;
+  line-height: 40px;
+}
+
+/* slashed price section end */
 .item {
   max-width: 50%;
   position: relative;
@@ -646,7 +738,7 @@ span.text-red {
   left: 0;
   right: 0;
   opacity: 0.2;
-  background-color: #303030;
+  background-color: var(--cards);
   overflow: hidden;
   z-index: 1;
 }
@@ -671,7 +763,7 @@ span.text-red {
 }
 
 .checkout {
-  background: #84a17d; /* fallback for old browsers */
+  background: var(--barner-color); /* fallback for old browsers */
 
   display: flex;
   flex-direction: column;
@@ -701,9 +793,9 @@ span.text-red {
 
 .checkout-field input {
   background-color: transparent;
-  border: 1px solid #cecece;
+  border: 1px solid var(--offwhite);
   border-radius: 5px;
-  color: #e0eafc;
+  color: var(--white);
   height: 35px;
   padding-left: 10px;
 }

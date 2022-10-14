@@ -11,20 +11,25 @@ const Paymentform = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
-  const [item, setItem] = useState([]);
-
-  // useEffect(() => {
-  //   cartItems.map((item) => {
-  //     setItem([item.name]);
-  //   });
-  // }, []);
+  const [itemName, setItemName] = useState('');
 
 
   useEffect(() => {
-    const cartItems =() => {
-      setItem(cartItems.name);
-    };
+    const itemName = cartItems.map((item) => {
+      return<>
+      {item.name}
+      {item.quantity}
+      </> 
+    });
+    setItemName(itemName)
   }, []);
+
+
+  // useEffect(() => {
+  //   const cartItems =() => {
+  //     setItem(cartItems.name);
+  //   };
+  // }, []);
 
   const renderedList = cartItems.map((item) => {
     return (
@@ -42,7 +47,7 @@ const Paymentform = () => {
 
   const custom_fields = [
     {
-      display_name: { item },
+      display_name: { itemName },
       variable_name: { name },
       value: { email },
     },
