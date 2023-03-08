@@ -29,7 +29,7 @@ const priceSlash = () => {
         <div className="conditions">
           <h3>Copy & Share the Link </h3>
           <h4>
-            <u>www.applestore.com/priceslash/84-83rhr39hf</u>{" "}
+            <u>www.kailebstore.com/priceslash/84-83rhr39hf</u>{" "}
           </h4>
           <p>
             <span>Note:</span> To get the Item at 70% discount, copy and share
