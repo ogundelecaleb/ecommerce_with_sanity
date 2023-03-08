@@ -932,8 +932,8 @@ span.text-red {
     flex-wrap: wrap;
   }
   .product-detail-container .product-detail-image {
-    width: 350px;
-    height: 350px;
+    width: 280px;
+    height: 280px;
   }
   .cart-container {
     width: 415px;
@@ -1012,8 +1012,8 @@ span.text-red {
     margin: auto;
   }
 }
-@media screen and (max-width: 300px){
+/* @media screen and (max-width: 300px){
 .product-detail-container .product-detail-image {
     width: 280px;
     height: 280px;
-}}
+}} */
