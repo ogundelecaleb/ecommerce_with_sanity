@@ -2,7 +2,7 @@ import React from "react";
 import Link from 'next/link'
 import { urlFor } from "../lib/client";
 
-const Herobanner = ({heroBanner}) => {
+const HeroBanner = ({heroBanner}) => {
   return (
     <div className="hero-banner-container">
       <p className="beats-solo"> {heroBanner.smallText}</p>
@@ -24,4 +24,4 @@ const Herobanner = ({heroBanner}) => {
   );
 };
 
-export default Herobanner;
+export default HeroBanner;
