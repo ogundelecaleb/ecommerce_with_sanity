@@ -49,6 +49,48 @@ a {
   margin: 6px 18px;
   position: relative;
 }
+.login-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 75vh;
+}
+
+.login-wrapper img{
+  object-fit: contain;
+  height: 200px;
+  width: auto;
+  margin-top: 60px;
+
+}
+.login-button{
+  padding: 4px 10px;
+  background-color: var(--main);
+  color: var(--white);
+  font-size: large;
+  margin-top: 60px;
+  padding: 14px;
+  border: none;
+  width: 140px;
+  margin: 80px auto;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+.signout-button{
+  padding: 4px 5px;
+  background-color: var(--main);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
 .marquee-text {
   font-size: 29px;
   font-weight: 600;
